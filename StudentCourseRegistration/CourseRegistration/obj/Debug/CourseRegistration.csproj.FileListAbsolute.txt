@@ -1,0 +1,10 @@
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\CourseRegistration\obj\Debug\CourseRegistration.csprojResolveAssemblyReference.cache
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\CourseRegistration\bin\Debug\CourseRegistration.pdb
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\CourseRegistration\bin\Debug\EntityFramework.dll
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\CourseRegistration\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\CourseRegistration\bin\Debug\EntityFramework.xml
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\CourseRegistration\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\CourseRegistration\obj\Debug\CourseRegistration.pdb
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\CourseRegistration\bin\Debug\CourseRegistration.dll.config
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\CourseRegistration\bin\Debug\CourseRegistration.dll
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\CourseRegistration\obj\Debug\CourseRegistration.dll

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataLayer.ContextModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities1" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="DataLayer.ContextModel.C__MigrationHistory" />
+    <EntitySet Name="Courses" EntityType="DataLayer.ContextModel.Cours" />
+    <EntitySet Name="Instructors" EntityType="DataLayer.ContextModel.Instructor" />
+    <EntitySet Name="Students" EntityType="DataLayer.ContextModel.Student" />
+    <EntitySet Name="sysdiagrams" EntityType="DataLayer.ContextModel.sysdiagram" />
+    <AssociationSet Name="FK_dbo_Courses_dbo_Instructors_Instructor_Iid" Association="DataLayer.ContextModel.FK_dbo_Courses_dbo_Instructors_Instructor_Iid">
+      <End Role="Instructors" EntitySet="Instructors" />
+      <End Role="Courses" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Students_dbo_Courses_Course_Cid" Association="DataLayer.ContextModel.FK_dbo_Students_dbo_Courses_Course_Cid">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Cours">
+    <Key>
+      <PropertyRef Name="Cid" />
+    </Key>
+    <Property Name="Cid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="RoomNumber" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Instructor_Iid" Type="Int32" />
+    <NavigationProperty Name="Instructor" Relationship="DataLayer.ContextModel.FK_dbo_Courses_dbo_Instructors_Instructor_Iid" FromRole="Courses" ToRole="Instructors" />
+    <NavigationProperty Name="Students" Relationship="DataLayer.ContextModel.FK_dbo_Students_dbo_Courses_Course_Cid" FromRole="Courses" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Instructor">
+    <Key>
+      <PropertyRef Name="Iid" />
+    </Key>
+    <Property Name="Iid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Courses" Relationship="DataLayer.ContextModel.FK_dbo_Courses_dbo_Instructors_Instructor_Iid" FromRole="Instructors" ToRole="Courses" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Sid" />
+    </Key>
+    <Property Name="Sid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Course_Cid" Type="Int32" />
+    <NavigationProperty Name="Cours" Relationship="DataLayer.ContextModel.FK_dbo_Students_dbo_Courses_Course_Cid" FromRole="Students" ToRole="Courses" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_dbo_Courses_dbo_Instructors_Instructor_Iid">
+    <End Role="Instructors" Type="DataLayer.ContextModel.Instructor" Multiplicity="0..1" />
+    <End Role="Courses" Type="DataLayer.ContextModel.Cours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructors">
+        <PropertyRef Name="Iid" />
+      </Principal>
+      <Dependent Role="Courses">
+        <PropertyRef Name="Instructor_Iid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Students_dbo_Courses_Course_Cid">
+    <End Role="Courses" Type="DataLayer.ContextModel.Cours" Multiplicity="0..1" />
+    <End Role="Students" Type="DataLayer.ContextModel.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="Cid" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="Course_Cid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

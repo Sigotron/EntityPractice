@@ -1,0 +1,12 @@
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\bin\Debug\DataLayer.dll.config
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\bin\Debug\DataLayer.dll
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\bin\Debug\DataLayer.pdb
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\bin\Debug\CourseRegistration.dll
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\bin\Debug\EntityFramework.dll
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\bin\Debug\CourseRegistration.pdb
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\bin\Debug\EntityFramework.xml
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\obj\Debug\DataLayer.dll
+c:\users\joels\documents\visual studio 2012\Projects\StudentCourseRegistration\DataLayer\obj\Debug\DataLayer.pdb
